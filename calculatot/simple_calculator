@@ -1,0 +1,45 @@
+print("Welcome to the Simple Calculator!")
+
+current_result = 0  # initial result
+
+# Display menu only once
+print("\nMenu:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("5. Clear Result")
+print("6. Exit\n")
+
+while True:
+    choice = int(input("Enter your choice (1-6): "))
+
+    if choice == 6:
+        print("Thank you for using the simple calculator. Goodbye")
+        break
+
+    elif choice == 5:
+        current_result = 0
+        print("Result cleared!")
+
+    elif choice in [1, 2, 3, 4]:
+        num2 = float(input("Enter a number: "))
+
+        if choice == 1:
+            current_result += num2
+            print(f"Current Result = {current_result}")
+        elif choice == 2:
+            current_result -= num2
+            print(f"Current Result = {current_result}")
+        elif choice == 3:
+            current_result *= num2
+            print(f"Current Result = {current_result}")
+        elif choice == 4:
+            try:
+                current_result /= num2
+                print(f"Current Result = {current_result}")
+            except ZeroDivisionError:
+                print("Error: Division by zero is not allowed!")
+
+    else:
+        print("Invalid choice. Please select a valid option.")
