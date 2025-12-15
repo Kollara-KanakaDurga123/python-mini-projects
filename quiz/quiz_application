@@ -1,0 +1,78 @@
+quiz = [
+    {
+        "question": "What is the capital of India?",
+        "options": ["A. Delhi", "B. Mumbai", "C. Chennai", "D. Kolkata"],
+        "answer": "A"
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A. func", "B. define", "C. def", "D. function"],
+        "answer": "C"
+    },
+    {
+        "question": "Which data type is used to store multiple values in Python?",
+        "options": ["A. int", "B. float", "C. list", "D. string"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the output of: print(2 ** 3)?",
+        "options": ["A. 6", "B. 8", "C. 9", "D. 5"],
+        "answer": "B"
+    },
+    {
+        "question": "Which symbol is used for comments in Python?",
+        "options": ["A. //", "B. /* */", "C. #", "D. <!-- -->"],
+        "answer": "C"
+    },
+    {
+        "question": "Which loop is used when the number of iterations is known?",
+        "options": ["A. while", "B. for", "C. do-while", "D. repeat"],
+        "answer": "B"
+    },
+    {
+        "question": "What does len() function do?",
+        "options": [
+            "A. Returns type of variable",
+            "B. Returns length of an object",
+            "C. Converts to integer",
+            "D. Prints output"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following is a mutable data type?",
+        "options": ["A. tuple", "B. string", "C. list", "D. int"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the correct file extension for Python files?",
+        "options": ["A. .pt", "B. .pyt", "C. .py", "D. .python"],
+        "answer": "C"
+    },
+    {
+        "question": "Which operator is used for equality comparison?",
+        "options": ["A. =", "B. ==", "C. !=", "D. >="],
+        "answer": "B"
+    }
+]
+
+score = 0
+
+print("Welcome to Quiz Zone")
+print("--------------------")
+
+for q in quiz:
+    print("\n"+q["question"])
+    for opt in q["options"]:
+        print(opt)
+
+    user_answer = input("Enter your option(A/B/C/D): ").upper()
+
+    if user_answer == q["answer"]:
+        print("correct")
+        score+=1
+    else:
+        print("wrong")
+        print("The correct answer is: ",q["answer"])
+
+print(f"Final score: {score} out of {len(quiz)}")
